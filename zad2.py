@@ -11,6 +11,7 @@ if __name__ == '__main__':
             x = input("Wprowadź odpowiednią literę: T - wyświetl, N - zakończ działanie programu: ")
             if  x == 'T':
                 f.pokaz_zdjecie(f.nazwa_dzisiaj())
+                #f.bytesIO()
             else:
                 print("Wpisz T lub N")
         if x == 'N':

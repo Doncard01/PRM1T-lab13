@@ -1,4 +1,4 @@
-import requests, datetime
+import requests, datetime, io
 import matplotlib.pyplot as plt
 
 def pobierz(url, nazwa):
@@ -25,6 +25,13 @@ def nazwa_dzisiaj():
     return nazwa
 def pokaz_zdjecie(sciezka):
     img = plt.imread(sciezka)
+    plt.imshow(img)
+    plt.axis('off')
+    plt.show()
+def bytesIO():
+    response = requests.get(url_dzisiaj())
+    buffer = io.BytesIO(response.content)
+    img = plt.imread(buffer)
     plt.imshow(img)
     plt.axis('off')
     plt.show()
