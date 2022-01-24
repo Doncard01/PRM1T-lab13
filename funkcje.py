@@ -24,6 +24,6 @@ def nazwa_dzisiaj():
     nazwa = "RigelWitchHead_Mtanous_" + data_godzina() + '.jpg'
     return nazwa
 def pokaz_zdjecie(sciezka):
-    img = plt.imread(sciezka)
+    img = plt.imread(sciezka, format=JPG)
     plt.imshow(img)
     plt.axis('off')

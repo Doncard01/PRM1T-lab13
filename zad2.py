@@ -7,7 +7,8 @@ if __name__ == '__main__':
         f.pobierz(f.url_dzisiaj(), f.nazwa_dzisiaj())
         print("Czy chcesz wyświetlić pobrany plik?")
         x = input("Wprowadź odpowiednią literę: T - wyświetl, N - zakończ działanie programu: ")
-        while (x != "N"):
+        while (x != "N" and x != 'T'):
+            x = input("Wprowadź odpowiednią literę: T - wyświetl, N - zakończ działanie programu: ")
             if  x == 'T':
                 f.pokaz_zdjecie(f.nazwa_dzisiaj())
             else:
